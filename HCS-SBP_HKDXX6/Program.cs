@@ -10,7 +10,7 @@ namespace HCS_SBP_HKDXX6
     {
         static async Task Main(string[] args)
         {
-            var n = 12;
+            var n = 50;
             var contain = new Point[n];
             for (var i = 0; i < n; i++)
             {
@@ -62,7 +62,7 @@ namespace HCS_SBP_HKDXX6
             var contain = new Point[cont.Length];
             cont.CopyTo(contain, 0);
 
-            var problem = new SbpProblem(contain, 15);
+            var problem = new SbpProblem(contain, 30);
             var solver = new SBPSolverHCS(problem, 0.1, 0.01, 10000, 1000);
             var min = double.MaxValue;
             (Polygon solution, double fitness)? sol = null;
